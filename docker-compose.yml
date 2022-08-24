@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  # flask applications
+  api:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./services/api/Dockerfile
+      target: development
+    volumes:
+      - ./services/api:/app
+      - ./packages:/app/packages
+    ports:
+      - 5000:5000

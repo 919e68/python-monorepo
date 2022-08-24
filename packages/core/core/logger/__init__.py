@@ -1,0 +1,2 @@
+def logger():
+  print('logger')
